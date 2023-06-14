@@ -68,7 +68,7 @@ const Profile = () => {
                                                         <div class="col-sm-4 bg-c-lite-green user-profile">
                                                             <div class="card-block text-center text-white">
                                                                 <div class="m-b-25">
-                                                                    <img src={`${BASE_URL}/uploads/${userprofile.profile}`} class="img-radius" alt="User-Profile-Image">
+                                                                    <img src={`${BASE_URL}/uploads/${userprofile.profile}`} class="img-radius" alt="User-Profile-Image" />
                                                                 </div
                                                                 <h6 class="f-w-600">{userprofile.fname + userprofile.lname}</h6>
 																<p>{user-profile.status}</p>

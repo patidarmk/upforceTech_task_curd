@@ -17,9 +17,9 @@ const Home = () => {
   const [userdata,setUserData] = useState([]);
   const [showspin,setShowSpin] = useState(true);
   const [search,setSearch] = useState("");
-  const [gender,setGender] = useState("All");
-  const [status,setStatus] = useState("All");
-  const [sort,setSort] = useState("new");
+  //const [gender,setGender] = useState("All");
+  //const [status,setStatus] = useState("All");
+  //const [sort,setSort] = useState("new");
   const [page,setPage] = useState(1);
   const [pageCount,setPageCount] = useState(0);
 
@@ -36,7 +36,7 @@ const Home = () => {
 
   // get user
   const userGet = async()=>{
-    const response = await usergetfunc(search,gender,status,sort,page);
+    const response = await usergetfunc(search,page);
     if(response.status === 200){
       setUserData(response.data.usersdata);
       setPageCount(response.data.Pagination.pageCount)
@@ -120,17 +120,18 @@ const Home = () => {
                 <Button variant="success" className='search_btn'>Search</Button>
               </Form>
             </div>
-            <div className="add_btn">
-              <Button variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
-            </div>
+            <div className="add_btn d-flex">
+				<Button variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
+				<div className="export_csv">
+				  <Button className='export_btn' onClick={exportuser}>Export To Csv</Button>
+				</div>
+			</div>
           </div>
           {/* export,gender,status */}
 
-          <div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
-            <div className="export_csv">
-              <Button className='export_btn' onClick={exportuser}>Export To Csv</Button>
-            </div>
-            <div className="filter_gender">
+          /*<div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
+           
+             <div className="filter_gender">
               <div className="filter">
                 <h3>Filter By Gender</h3>
                 <div className="gender d-flex justify-content-between">
@@ -158,10 +159,10 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */
 
             {/* short by value */}
-            <div className="filter_newold">
+            /* <div className="filter_newold">
               <h3>Short By Value</h3>
               <Dropdown className='text-center'>
                 <Dropdown.Toggle className='dropdown_btn' id="dropdown-basic">
@@ -172,10 +173,10 @@ const Home = () => {
                   <Dropdown.Item onClick={()=>setSort("old")}>Old</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-            </div>
+            </div> */
 
             {/* filter by status */}
-            <div className="filter_status">
+         /*    <div className="filter_status">
               <div className="status">
                 <h3>Filter By Status</h3>
                 <div className="status_radio d-flex justify-content-between flex-wrap">
@@ -204,8 +205,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>*/
+        </div> 
         {
           showspin ? <Spiner /> : <Tables
                                     userdata={userdata}

@@ -88,7 +88,7 @@ const Home = () => {
     setTimeout(()=>{
         setShowSpin(false)
     },1200)
-  },[search,gender,status,sort,page])
+  },[search,page])
 
   return (
     <>
@@ -127,85 +127,6 @@ const Home = () => {
 				</div>
 			</div>
           </div>
-          {/* export,gender,status */}
-
-          /*<div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
-           
-             <div className="filter_gender">
-              <div className="filter">
-                <h3>Filter By Gender</h3>
-                <div className="gender d-flex justify-content-between">
-                  <Form.Check
-                    type={"radio"}
-                    label={`All`}
-                    name="gender"
-                    value={"All"}
-                    onChange={(e)=>setGender(e.target.value)}
-                    defaultChecked
-                  />
-                  <Form.Check
-                    type={"radio"}
-                    label={`Male`}
-                    name="gender"
-                    value={"Male"}
-                    onChange={(e)=>setGender(e.target.value)}
-                  />
-                  <Form.Check
-                    type={"radio"}
-                    label={`Female`}
-                    name="gender"
-                    value={"Female"}
-                    onChange={(e)=>setGender(e.target.value)}
-                  />
-                </div>
-              </div>
-            </div> */
-
-            {/* short by value */}
-            /* <div className="filter_newold">
-              <h3>Short By Value</h3>
-              <Dropdown className='text-center'>
-                <Dropdown.Toggle className='dropdown_btn' id="dropdown-basic">
-                  <i class="fa-solid fa-sort"></i>
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item onClick={()=>setSort("new")}>New</Dropdown.Item>
-                  <Dropdown.Item onClick={()=>setSort("old")}>Old</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div> */
-
-            {/* filter by status */}
-         /*    <div className="filter_status">
-              <div className="status">
-                <h3>Filter By Status</h3>
-                <div className="status_radio d-flex justify-content-between flex-wrap">
-                  <Form.Check
-                    type={"radio"}
-                    label={`All`}
-                    name="status"
-                    value={"All"}
-                    onChange={(e)=>setStatus(e.target.value)}
-                    defaultChecked
-                  />
-                  <Form.Check
-                    type={"radio"}
-                    label={`Active`}
-                    name="status"
-                    value={"Active"}
-                    onChange={(e)=>setStatus(e.target.value)}
-                  />
-                  <Form.Check
-                    type={"radio"}
-                    label={`InActive`}
-                    name="status"
-                    value={"InActive"}
-                    onChange={(e)=>setStatus(e.target.value)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>*/
         </div> 
         {
           showspin ? <Spiner /> : <Tables

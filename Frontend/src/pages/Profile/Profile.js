@@ -86,19 +86,23 @@ const Profile = () => {
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Phone</p>
                                                                         <h6 class="text-muted f-w-400">{userprofile.mobile}</h6>
-                                                                    </div>
+                                                                    </div>	
+                                                                </div>
+    
+                                                                <div class="row">
 																	<div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Gender</p>
                                                                         <h6 class="text-muted f-w-400">{userprofile.gender}</h6>
                                                                     </div>
-                                                                </div>
-    
-                                                                <div class="row">
                                                                     <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Location</p>
                                                                         <h6 class="text-muted f-w-400">{userprofile.location}</h6>
                                                                     </div>
-                                                                    <div class="col-sm-6">
+                                                                    
+                                                                </div>
+																
+																<div class="row">
+                                                                   <div class="col-sm-6">
                                                                         <p class="m-b-10 f-w-600">Date Created</p>
                                                                         <h6 class="text-muted f-w-400">{moment(userprofile.datecreated).format("DD-MM-YYYY")}</h6>
                                                                     </div>
@@ -107,22 +111,6 @@ const Profile = () => {
                                                                         <h6 class="text-muted f-w-400">{userprofile.dateUpdated}</h6>
                                                                     </div>
                                                                 </div>
-																
-																 <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Recent</p>
-                                                                        <h6 class="text-muted f-w-400">Sam Disuja</h6>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Most Viewed</p>
-                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
-                                                                    </div>
-																	<div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Most Viewed</p>
-                                                                        <h6 class="text-muted f-w-400">Dinoter husainm</h6>
-                                                                    </div>
-                                                                </div>
-																
 																
                                                             </div>
                                                         </div>

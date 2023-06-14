@@ -71,7 +71,7 @@ const Profile = () => {
                                                                     <img src={`${BASE_URL}/uploads/${userprofile.profile}`} class="img-radius" alt="User-Profile-Image" />
                                                                 </div>
                                                                 <h6 class="f-w-600">{userprofile.fname + userprofile.lname}</h6>
-																<p>{user-profile.status}</p>
+																<p>{userprofile.status}</p>
                                                                 <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                                             </div>
                                                         </div>

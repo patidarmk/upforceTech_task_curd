@@ -1,22 +1,62 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from "react-router-dom"
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Stack from '@mui/material/Stack';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import AdbIcon from '@mui/icons-material/Adb';
 
-const Headers = () => {
+function appBarLabel(label) {
   return (
-    <>
-      <Navbar bg="dark" variant="dark" style={{ height: "50px" }}>
-        <Container>
-          <NavLink to="/" className="text-decoration-none text-light mx-2">Navbar</NavLink>
-          <Nav className="me-auto">
-            <NavLink to="/" className="text-decoration-none text-light ">Home</NavLink>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
-  )
+    <Toolbar>
+    
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.1rem',
+              color: 'white',
+              marginRight:'5rem',
+              textDecoration: 'none',
+            }}
+          >
+            Home
+          </Typography>
+      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+        MERN stack Developer Practical Task
+      </Typography>
+    </Toolbar>
+  );
 }
 
-export default Headers
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#1976d2',
+    },
+  },
+}); 
+    
+export default function Headers() {
+  return (
+    <Stack spacing={2} sx={{ flexGrow: 1 }}>
+      <ThemeProvider theme={darkTheme}>
+        <AppBar position="static" color="primary" enableColorOnDark>
+          {appBarLabel('enableColorOnDark')}
+        </AppBar>
+        <AppBar position="static" color="primary">
+          {appBarLabel('default')}
+        </AppBar>
+      </ThemeProvider>
+    </Stack>     
+  );
+}

@@ -19,3 +19,11 @@
 .dropdown_btn:hover {
     color: blue !important;
 }
+
+.btn-add {
+	margin-right:1rem;
+}
+
+.main_div{
+	margin-bottom:2rem;
+}

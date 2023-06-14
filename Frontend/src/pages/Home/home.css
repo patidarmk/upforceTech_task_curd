@@ -27,7 +27,8 @@
 .main_div{
 	margin-bottom:2rem;
 }
-.d-flex{
+.flexitem{
+	display:flex;
 	align-items: center;
     display: flex!important;
     gap: 1rem;

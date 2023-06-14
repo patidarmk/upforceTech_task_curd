@@ -17,9 +17,9 @@ const Home = () => {
   const [userdata,setUserData] = useState([]);
   const [showspin,setShowSpin] = useState(true);
   const [search,setSearch] = useState("");
-  //const [gender,setGender] = useState("All");
-  //const [status,setStatus] = useState("All");
-  //const [sort,setSort] = useState("new");
+  const [gender,setGender] = useState("All");
+  const [status,setStatus] = useState("All");
+  const [sort,setSort] = useState("new");
   const [page,setPage] = useState(1);
   const [pageCount,setPageCount] = useState(0);
 
@@ -36,7 +36,7 @@ const Home = () => {
 
   // get user
   const userGet = async()=>{
-    const response = await usergetfunc(search,page);
+    const response = await usergetfunc(search,gender,status,sort,page);
     if(response.status === 200){
       setUserData(response.data.usersdata);
       setPageCount(response.data.Pagination.pageCount)
@@ -88,7 +88,7 @@ const Home = () => {
     setTimeout(()=>{
         setShowSpin(false)
     },1200)
-  },[search,page])
+  },[search,gender,status,sort,page])
 
   return (
     <>
@@ -120,14 +120,19 @@ const Home = () => {
                 <Button variant="success" className='search_btn'>Search</Button>
               </Form>
             </div>
+            <div className="add_btn">
+              <Button variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
+            </div>
+          </div>
+          {/* export,gender,status */}
+
             <div className="add_btn flexitem div-side">
 				<Button className="btn-add" variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
 				<div className="export_csv">
 				  <Button className='export_btn' onClick={exportuser}>Export To Csv</Button>
 				</div>
 			</div>
-          </div>
-        </div> 
+        </div>
         {
           showspin ? <Spiner /> : <Tables
                                     userdata={userdata}

@@ -27,3 +27,9 @@
 .main_div{
 	margin-bottom:2rem;
 }
+.d-flex{
+	align-items: center;
+    display: flex!important;
+    gap: 1rem;
+    padding: 0rem 0.5rem;
+}

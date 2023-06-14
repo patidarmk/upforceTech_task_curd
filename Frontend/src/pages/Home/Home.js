@@ -120,8 +120,8 @@ const Home = () => {
                 <Button variant="success" className='search_btn'>Search</Button>
               </Form>
             </div>
-            <div className="add_btn d-flex">
-				<Button variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
+            <div className="add_btn flexitem div-side">
+				<Button className="btn-add" variant="primary" onClick={adduser}> <i class="fa-solid fa-plus"></i>&nbsp; Add User</Button>
 				<div className="export_csv">
 				  <Button className='export_btn' onClick={exportuser}>Export To Csv</Button>
 				</div>

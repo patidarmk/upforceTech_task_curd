@@ -26,12 +26,13 @@ function appBarLabel(label) {
               color: 'white',
               marginRight:'5rem',
               textDecoration: 'none',
+			  marginRight:'10rem'
             }}
           >
             Home
           </Typography>
       <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-        MERN stack Developer Practical Task
+        MERN Stack Developer Practical Task
       </Typography>
     </Toolbar>
   );
@@ -50,10 +51,9 @@ export default function Headers() {
   return (
     <Stack spacing={2} sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={darkTheme}>
-        <AppBar position="static" color="primary" enableColorOnDark>
-          {appBarLabel('enableColorOnDark')}
+        <AppBar position="static" color="primary">
+          {appBarLabel('default')}
         </AppBar>
-     
       </ThemeProvider>
     </Stack>     
   );

@@ -37,7 +37,7 @@ const Profile = () => {
       ) : (
         <div class="page-content page-container" id="page-content">
           <div class="padding">
-		  <a href="/"></a>
+		  <a href="/">Close</a>
             <div class="row container d-flex justify-content-center">
               <div class="col-xl-6 col-md-12">
                 <div class="card user-card-full">

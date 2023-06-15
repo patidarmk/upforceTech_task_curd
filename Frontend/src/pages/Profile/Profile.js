@@ -44,7 +44,7 @@ const Profile = () => {
                   <div className="row m-l-0 m-r-0">
                     <div className="col-sm-4 bg-c-lite-green user-profile">
                       <div className="card-block text-center text-white">
-					  <a href="/">Close</a>
+					  
                         <div className="m-b-25">
                           <img
                             src={`${BASE_URL}/uploads/${userprofile.profile}`}
@@ -60,7 +60,9 @@ const Profile = () => {
                       </div>
                     </div>
                     <div className="col-sm-8">
+					<a href="/">Close</a>
                       <div className="card-block">
+					  <a href="/">Close</a>
                         <h6 className="m-b-20 p-b-5 b-b-default f-w-600">
                           Information
                         </h6>

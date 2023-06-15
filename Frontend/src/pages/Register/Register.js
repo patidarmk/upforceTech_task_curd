@@ -51,9 +51,7 @@ const Register = () => {
 
   // profile set
   const setProfile = (e) => {
-	  let imageURL = e.target.files[0];
-	  imageURL = imageURL.replace(/\s+/g, '');
-	  setImage(imageURL)
+    setImage(e.target.files[0])
   }
 
   //submit userdata

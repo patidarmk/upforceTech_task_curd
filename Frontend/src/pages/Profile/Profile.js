@@ -7,7 +7,6 @@ import { singleUsergetfunc } from "../../services/Apis";
 import { BASE_URL } from "../../services/helper";
 import moment from "moment";
 import "./profile.css";
-import profile-image from `${BASE_URL}/uploads/${userprofile.profile}`;
 
 const Profile = () => {
   const [userprofile, setUserProfile] = useState({});
@@ -47,7 +46,7 @@ const Profile = () => {
                       <div className="card-block text-center text-white">
                         <div className="m-b-25">
                           <img
-                            src={profile-image}
+                            src={`${BASE_URL}/uploads/${userprofile.profile}`}
                             className="img-radius user-profile-image"
                             alt="User-Profile-Image"
                           />

@@ -49,7 +49,7 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                         <>
                           <tr>
                             <td>{index + 1 + (page - 1)*4}</td> 
-                            <td>{element.fname + element.lname}</td>
+                            <td>{element.fname +" " +element.lname}</td>
                             <td>{element.email}</td>
                             <td>{element.gender == "Male" ? "M" : "F"}</td>
                             <td className='d-flex align-items-center'>

@@ -47,7 +47,7 @@ const Profile = () => {
                         <div className="m-b-25">
                           <img
                             src={`${BASE_URL}/uploads/${userprofile.profile}`}
-                            className="img-radius User-Profile-Image"
+                            className="img-radius user-profile-image"
                             alt="User-Profile-Image"
                           />
                         </div>

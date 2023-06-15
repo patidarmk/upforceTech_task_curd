@@ -38,7 +38,6 @@ const Profile = () => {
         <div className="page-content page-container" id="page-content">
           <div className="padding">
             <div className="row container d-flex justify-content-center">
-			<a href="/">Close</a>
               <div className="col-xl-6 col-md-12">
                 <div className="card user-card-full">
                   <div className="row m-l-0 m-r-0">
@@ -60,9 +59,8 @@ const Profile = () => {
                       </div>
                     </div>
                     <div className="col-sm-8">
-					<a href="/">Close</a>
+					<a className="close-btn" href="/">Close</a>
                       <div className="card-block">
-					  <a href="/">Close</a>
                         <h6 className="m-b-20 p-b-5 b-b-default f-w-600">
                           Information
                         </h6>

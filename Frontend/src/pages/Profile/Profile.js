@@ -35,76 +35,76 @@ const Profile = () => {
       {showspin ? (
         <Spiner /> 
       ) : (
-        <div class="page-content page-container" id="page-content">
-          <div class="padding">
+        <div className="page-content page-container" id="page-content">
+          <div className="padding">
 		  <a href="/">Close</a>
-            <div class="row container d-flex justify-content-center">
-              <div class="col-xl-6 col-md-12">
-                <div class="card user-card-full">
-                  <div class="row m-l-0 m-r-0">
-                    <div class="col-sm-4 bg-c-lite-green user-profile">
-                      <div class="card-block text-center text-white">
-                        <div class="m-b-25">
+            <div className="row container d-flex justify-content-center">
+              <div className="col-xl-6 col-md-12">
+                <div className="card user-card-full">
+                  <div className="row m-l-0 m-r-0">
+                    <div className="col-sm-4 bg-c-lite-green user-profile">
+                      <div className="card-block text-center text-white">
+                        <div className="m-b-25">
                           <img
                             src={`${BASE_URL}/uploads/${userprofile.profile}`}
-                            class="img-radius"
+                            className="img-radius User-Profile-Image"
                             alt="User-Profile-Image"
                           />
                         </div>
-                        <h6 class="f-w-600">
+                        <h6 className="f-w-600">
                           {userprofile.fname+" "+userprofile.lname}
                         </h6>
                         <p>{userprofile.status}</p>
-                        <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                        <i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="card-block">
-                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">
+                    <div className="col-sm-8">
+                      <div className="card-block">
+                        <h6 className="m-b-20 p-b-5 b-b-default f-w-600">
                           Information
                         </h6>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Email</p>
-                            <h6 class="text-muted f-w-400">
+                        <div className="row">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Email</p>
+                            <h6 className="text-muted f-w-400">
                               {userprofile.email}
                             </h6>
                           </div>
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Phone</p>
-                            <h6 class="text-muted f-w-400">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Phone</p>
+                            <h6 className="text-muted f-w-400">
                               {userprofile.mobile}
                             </h6>
                           </div>
                         </div>
 
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Gender</p>
-                            <h6 class="text-muted f-w-400">
+                        <div className="row">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Gender</p>
+                            <h6 className="text-muted f-w-400">
                               {userprofile.gender}
                             </h6>
                           </div>
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Location</p>
-                            <h6 class="text-muted f-w-400">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Location</p>
+                            <h6 className="text-muted f-w-400">
                               {userprofile.location}
                             </h6>
                           </div>
                         </div>
 
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Date Created</p>
-                            <h6 class="text-muted f-w-400">
+                        <div className="row">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Date Created</p>
+                            <h6 className="text-muted f-w-400">
                               {moment(userprofile.datecreated).format(
                                 "DD-MM-YYYY"
                               )}
                             </h6>
                           </div>
-                          <div class="col-sm-6">
-                            <p class="m-b-10 f-w-600">Date Updated</p>
-                            <h6 class="text-muted f-w-400">
+                          <div className="col-sm-6">
+                            <p className="m-b-10 f-w-600">Date Updated</p>
+                            <h6 className="text-muted f-w-400">
                               {userprofile.dateUpdated}
                             </h6>
                           </div>

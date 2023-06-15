@@ -39,7 +39,9 @@ const Home = () => {
     const response = await usergetfunc(search,gender,status,sort,page);
     if(response.status === 200){
       setUserData(response.data.usersdata);
-      setPageCount(response.data.Pagination.pageCount)
+      setPageCount(response.data.Pagination.pageCount);
+	  setShowSpin(false)
+	  
     }else{
       console.log("error for get user data")
     }
@@ -85,9 +87,7 @@ const Home = () => {
 
   useEffect(()=>{
     userGet();
-    setTimeout(()=>{
-        setShowSpin(false)
-    },1200)
+   
   },[search,gender,status,sort,page])
 
   return (
